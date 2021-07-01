@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "minedoscrazy-versions-getter"
+version = "0.1.0"
+description = ""
+authors = ["João Paulo Carvalho <jjpaulo2@protonmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+beautifulsoup4 = "^4.9.3"
+lxml = "^4.6.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+jedi = "^0.18.0"
+ipython = "^7.25.0"
+pylint = "^2.9.1"
+autopep8 = "^1.5.7"
+coverage = "^5.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
