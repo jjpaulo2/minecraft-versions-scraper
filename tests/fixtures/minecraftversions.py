@@ -1,12 +1,13 @@
-from os.path import dirname
+from os.path import dirname as _dirname
 
-def get_page_content() -> str:
-    current_path = dirname(__file__)
+
+def _get_page_content() -> str:
+    current_path = _dirname(__file__)
     with open(f'{current_path}/pages/minecraftversions.html', 'r') as file:
-        return file.read()
+        return file.read()    
 
-PAGE = get_page_content()
-    
+
+PAGE = _get_page_content()
 
 KEYS = [
     'Stable Releases',
@@ -499,4 +500,9 @@ ALPHA_VERSIONS = [
     "rd-20090515",
     "rd-132328",
     "rd-132211"
+]
+
+STABLE_WITHOUT_SERVER= [
+    '1.1',
+    '1.0'
 ]

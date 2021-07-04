@@ -1,3 +1,5 @@
+from contextlib import suppress
+
 from bs4 import BeautifulSoup
 from . import Source
 
@@ -18,8 +20,19 @@ class MinecraftVersionsSource(Source):
             versions = div.find_all('li', class_='list-group-item release')
             for version_tag in versions:
                 version = version_tag.attrs['id']
-                download_tag = version_tag.find('a', class_='btn btn-xs btn-info client')
+                self.DATA[title][version] = {}
 
-                self.DATA[title][version] = download_tag.attrs['href']
+                download_client_tag = version_tag.find('a', class_='btn btn-xs btn-info client')
+                download_server_tag = version_tag.find('a', class_='btn btn-xs btn-danger server')
+                
+                download_client = None
+                download_server = None
+
+                with suppress(AttributeError):
+                    download_client = download_client_tag.attrs['href']
+                    download_server = download_server_tag.attrs['href']
+
+                self.DATA[title][version]['client'] = download_client
+                self.DATA[title][version]['server'] = download_server
         
         return self.DATA
