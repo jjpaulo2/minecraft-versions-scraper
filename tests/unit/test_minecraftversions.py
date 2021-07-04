@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from pytest import mark
 
 from tests.fixtures.minecraftversions import *
-from versions_getter.sources.minecraftversions import MinecraftVersionsSource
+from versions_scraper.sources.minecraftversions import MinecraftVersionsSource
 
 
 source = MinecraftVersionsSource()
@@ -79,4 +79,5 @@ class TestAlphaVersions:
 
     def test_did_not_get_server_snapshot_jars(self, version):
         server_version = source.DATA[self.VERSIONS_KEY][version]['server']
-        assert server_version is None 
+        assert server_version is None
+        
