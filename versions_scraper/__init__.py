@@ -1,6 +1,6 @@
 # MIT License
 # 
-# Copyright (c) 2021 Mine dos Crazy
+# Copyright (c) 2021 minedoscrazy
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,6 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-__package__ = 'minedoscrazy.versions_getter'
 __version__ = '0.0.1'
-__homepage__ = 'https://github.com/minedoscrazy/versions-getter'
+
+__license__ = 'MIT'
+__author__ = 'João Paulo Carvalho <jjpaulo2@protonmail.com'
+__homepage__ = 'https://github.com/minedoscrazy/versions-scraper'

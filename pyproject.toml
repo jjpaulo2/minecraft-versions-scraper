@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "minedoscrazy-versions-getter"
+name = "minedoscrazy-versions-scraper"
 version = "0.1.0"
 description = ""
 authors = ["João Paulo Carvalho <jjpaulo2@protonmail.com>"]
@@ -10,6 +10,7 @@ python = "^3.8"
 requests = "^2.25.1"
 beautifulsoup4 = "^4.9.3"
 lxml = "^4.6.3"
+simple-term-menu = "^1.2.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
